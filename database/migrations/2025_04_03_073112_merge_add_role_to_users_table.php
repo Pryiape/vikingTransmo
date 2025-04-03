@@ -5,7 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use Laravel\Fortify\Fortify;
 
-class MergedCreateUsersTable extends Migration
+class MergeAddRoleToUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,11 +14,6 @@ class MergedCreateUsersTable extends Migration
      */
     public function up()
     {
-        // Drop the foreign key constraint from the builds table if exists
-        Schema::table('builds', function (Blueprint $table) {
-            $table->dropForeign(['user_id']);
-        });
-
         // Drop the users table if it exists
         Schema::dropIfExists('users');
 
@@ -40,9 +35,14 @@ class MergedCreateUsersTable extends Migration
             $table->timestamps();
         });
 
+        // Drop the foreign key constraint from the builds table if exists
+        Schema::table('builds', function (Blueprint $table) {
+            $table->dropForeign(['user_id']);
+        });
+
         // Re-add the foreign key constraint to the builds table
         Schema::table('builds', function (Blueprint $table) {
-            $table->foreignId('user_id')->constrained('users');
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
         });
     }
 
@@ -74,7 +74,7 @@ class MergedCreateUsersTable extends Migration
 
         // Re-add the foreign key constraint to the builds table
         Schema::table('builds', function (Blueprint $table) {
-            $table->foreignId('user_id')->constrained('users');
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
         });
     }
 }
