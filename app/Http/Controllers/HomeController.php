@@ -12,7 +12,7 @@ class HomeController extends Controller
 {
     //la page / vue home.blade.php
     /**
-     * Récupère les données de jeu et les spécialisations, puis passe les données à la vue home.
+     * 
      */
     public function home()
     {    
@@ -30,6 +30,11 @@ class HomeController extends Controller
 
         return view('home', compact('publicBuilds'));
     }
+    public function about()
+    {
+    return view('home.about');
+    }
+
 
     //la page / vue dashboard.blade.php
     /**
