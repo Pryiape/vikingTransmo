@@ -6,6 +6,450 @@ endpoints:
   -
     httpMethods:
       - GET
+    uri: login
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n\n    <title>Viking Transmo - Connexion</title>\n\n    <!-- Fonts -->\n    <link rel=\"preconnect\" href=\"https://fonts.bunny.net\">\n    <link href=\"https://fonts.bunny.net/css?family=figtree:400,600&display=swap\" rel=\"stylesheet\" />\n\n    <!-- Bootstrap -->\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n\n    <!-- Custom CSS -->\n    <link rel=\"stylesheet\" href=\"http://localhost/css/app.css\">\n</head>\n<body>\n\n    \n    <!-- Bootstrap 5.3.2 -->\n<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js\"></script>\n\n<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n    <div class=\"container-fluid\">\n        <a class=\"navbar-brand d-flex align-items-center\" href=\"#\">\n            <img src=\"http://localhost/viking.jpg\" alt=\"Viking Logo\" style=\"height: 40px; margin-right: 10px;\">\n            Viking Violet\n        </a>\n        <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\" \n                aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n            <span class=\"navbar-toggler-icon\"></span>\n        </button>\n\n        <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n            <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">\n                <li class=\"nav-item\">\n                    <a class=\"nav-link \" \n                       aria-current=\"page\" href=\"http://localhost\">Home</a>\n                </li>\n                <li class=\"nav-item\">\n                    <a class=\"nav-link \" \n                       aria-current=\"page\" href=\"http://localhost/a-propos\">About</a>\n                </li>\n            </ul>\n\n            <div class=\"btn-group\">\n                            <button type=\"button\" class=\"btn btn-light dropdown-toggle\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">\n                Connexion\n                </button>\n                    <ul class=\"dropdown-menu dropdown-menu-end\"> <!-- Ajout de dropdown-menu-end -->\n                    <li><a class=\"dropdown-item\" href=\"http://localhost/login\">Login</a></li>\n                    <li><a class=\"dropdown-item\" href=\"http://localhost/register\">Register</a></li>\n                </ul>\n            \n                \n            </div>\n        </div>\n    </div>\n</nav>\n\n<!-- Script pour forcer l'initialisation des dropdowns si nécessaire -->\n<script>\n    document.addEventListener(\"DOMContentLoaded\", function() {\n        var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))\n        var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {\n            return new bootstrap.Dropdown(dropdownToggleEl);\n        });\n    });\n</script>\n    \n    <main class=\"container py-4\">\n           <div class=\"container\">\n        \n        <div class=\"row\">\n            <div class=\"col-md-6 mx-auto\">\n                \n                <h1 class=\"text-center text-muted mb-3 mt-5\">Veuillez vous connecter</h1>\n                <p class=\"text-center text-muted mb-5\">Vos builds vous attendent</p>\n                <form action=\"http://localhost/login\" method=\"post\">\n                    <input type=\"hidden\" name=\"_token\" value=\"XTQRzbxzsmqQXTSVGvlaaAq8sODIf0ygebY8Hqa4\" autocomplete=\"off\">                    \n                    <label for=\"email\">Email</label>\n                    <input type=\"email\" name=\"email\" id=\"email\" class=\"form-control mb-3 \" value=\"\" required autocomplete=\"email\" autofocus>\n                    \n                    \n                    <label for=\"password\">Mot de passe</label>\n                    <input type=\"password\" name=\"password\" id=\"password\" class=\"form-control mb-3 \" required>\n                    \n                    \n                    <div class=\"d-flex justify-content-between align-items-center mb-3\">\n                        <div class=\"form-check\">\n                            <input type=\"checkbox\" class=\"form-check-input\" id=\"remember\" name=\"remember\" >\n                            <label class=\"form-check-label\" for=\"remember\">Rester connecté</label>\n                        </div>\n                    </div>\n\n                    \n                    <button type=\"submit\" class=\"btn btn-primary\">Connexion</button>\n\n                    \n                    <p class=\"text-center text-muted mt-5\">Pas encore de compte ? <a href=\"http://localhost/register\">Créer un compte</a></p>\n                </form>\n            </div>\n        </div>\n   </div>\n    </main>\n\n    \n    <footer class=\"bg-light text-center py-3 mt-5 border-top\">\r\n    <div class=\"container\">\r\n        <p class=\"mb-1\">© 2025 Viking Violet. Tous droits réservés.</p>\r\n        <a href=\"http://localhost/mentions-legales\" class=\"text-decoration-none text-muted\">Mentions légales</a>\r\n    </div>\r\n</footer>\r\n\n    <!-- Scripts -->\n    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js\"></script>\n    <script src=\"http://localhost/assets/js/app.js\"></script>\n<script src=\"http://localhost/assets/lib/jquery/jquery.js\"></script>\n<script src=\"http://localhost/assets/main/user/user.js\"></script>\n    \n</body>\n</html>\n"
+        headers:
+          content-type: 'text/html; charset=UTF-8'
+          cache-control: 'no-cache, private'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IkZTcVdtNUd0UWdKOXRmcEFTUFY5K1E9PSIsInZhbHVlIjoiaUp0SkJ3UVJvOUhmbFdyZW9DZEVnRXZQUVhXR1VsT3R3cHd5R29CZ2hRNGtOQjZ4VnYrNUdpeTFPUUNnQzB2dWdNVUprUnRzR3pYWHE1VlI2YjVxQkVXQloxRFZuWTdLU240Q2VzZWxuWTQvdGVBY1JlY3A2ZVpybFlDVTEyTFoiLCJtYWMiOiJkYjFmMzM3NjY5MmI1NGI3Y2ZkNjg0ODBhNDA4YjkwNmE3NjgxZmMxZGRlNDQ2OGZjOWMzNzY4NjcxYWVhNjU5IiwidGFnIjoiIn0%3D; expires=Mon, 21 Apr 2025 23:15:39 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6Ii90c0NRYmNKNnNLY3p2dFBLYmluZFE9PSIsInZhbHVlIjoiT0xiaGd0T3NINm5WbTlHRTd4R1A2Y3p1TDRZYm9DMmFyazVzUi9OejQrSjYwVjRUZDM2TVN2bzA4S3ZEN25PdldYVmt6RXpteVg3WHFXbmRHL3drTWh1YTVYTmFwOGNFWUppbWg1aVhaaDJVK3U4UTI5aFZvZTJ2aFlMMXZYaWIiLCJtYWMiOiJkMWFmOTZhZDE4NGM0MzgzNTUzNmQ4MDg3ZjVkNTJkZWJhYTU1MzIxN2YyYWU1ZWM2MjY4NDA2YTlhNWEzNzQ5IiwidGFnIjoiIn0%3D; expires=Mon, 21 Apr 2025 23:15:39 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: login
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: gbailey@example.net
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      email: gbailey@example.net
+      password: architecto
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: logout
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: forgot-password
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Show the reset password link request view.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6InpOd2FGZjRweFVwb09kaE9nSFRqd0E9PSIsInZhbHVlIjoiREtnZ2I4QzdUN3ZIc0V5dzlXZkV6ajB2M2ZlSklxQzZZN0NiMU5YWGY3dVhDZk5RNDROS0dPWkJwc2llOGNqVnZSK2hscHhrR0NMNzgydCtqWmlacXkyVGQ5Yk5tSy8vT0M0anRDUjZTRk9wbk9TNnVJTkg2R3hqVVN3L3VGQnQiLCJtYWMiOiJkZTkyN2JjMTBlMjdmNDJkM2Y1NDJkNDE4NDZkNWM0MWY1MDM0NTQ2NzExZDJhOTE3OGY0NjQyZWYwMDA2NGQ2IiwidGFnIjoiIn0%3D; expires=Mon, 21 Apr 2025 23:15:39 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6InFTMTN4eXJPbE03WmtPVUdWVjZvOUE9PSIsInZhbHVlIjoiQmhOYUtGR1I3bGEyaDR0Vy9aYk1MZ1BlTktlSzdDVFBZaGh1QjlaV2lGc2YrYTJhTDFFaU9VRWo5cXU1MzBWMzYraDhFdmJCbU1IbnhzTzUyb1JnSGZGbzV3eWx0OEdoRmlhNzlWWG9neC9ySTMvbnh1Q2dFek1tZ3VzY1lRdHgiLCJtYWMiOiIzZDJhMjkwNjg3YTFlMjEwMzRkNjlkYWIyYTkwMDczZTBhNWIyZmE0ZjBiM2U1ZmRkNTljZjc0YjI1YjUzOWI5IiwidGFnIjoiIn0%3D; expires=Mon, 21 Apr 2025 23:15:39 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'reset-password/{token}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Show the new password view.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      token:
+        name: token
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      token: architecto
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6InRnZC96RWdZZHhFbGhPNllSL3U4bHc9PSIsInZhbHVlIjoidkRTM3FFTHJZYTRnSmdsbWU1eXh1SzQ5L2tGTFBBT0ZPU0FqRElyUTJmUlhacnc3bjJIU3gxUXM0Y1JQaGs3NVh4aTcrWGNZRXZOTDBMbW1UaXB3RjJlL2tDbk9vSkZQbWpzMXpQUmtoSFlPa0lIMGFjS0xncjBtblRXM0k3RkgiLCJtYWMiOiJmZWE1MTgzMDBlYjY1NzcxODYwOWM4ODA3YzhkMWNiYjM1NzUzZmQyZTcyM2U0ODZlZGQ1MGQ0Yzg1OThkMThjIiwidGFnIjoiIn0%3D; expires=Mon, 21 Apr 2025 23:15:39 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IlJOelNEOUZHVlhVbnhBaFBLWnpDZlE9PSIsInZhbHVlIjoiT0JCemVvM2VTRHNvczJ0RUtwUzJNTEluUXMxSkxQN2QyY0tJRkRCNHM1cDJyWHhXRENrMC91b2owcnJGamd0clhwT3NUNUI3WVRVOVZMQzRoTFNWdFJ4eTR5THQ5WEJncE9hSVYzNmRsT1pFWW9GeERJOXBZOFFhS0pkNTZqS1giLCJtYWMiOiJiZmZmZWQwMGNkMjcwMjJlNTZlODA3NTI2YTY5MDM3ZTU5ZTliMTkzYWMzNjJhY2Q0NmUyMmMyYjQyZjc2YzA1IiwidGFnIjoiIn0%3D; expires=Mon, 21 Apr 2025 23:15:39 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: forgot-password
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Send a reset link to the given user.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: reset-password
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: "Reset the user's password."
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      token:
+        name: token
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      token: architecto
+      password: architecto
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: user/confirm-password
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Show the confirm password view.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IjRYSnp2RHVOTHpZNFE1SnJsNUtab1E9PSIsInZhbHVlIjoia2xlSlNKV2xWbzVndFpVZ3FjUE1pZXZQWitSa0lpMkJPeVEyeEx1MFJQWFVNMVRxME9TOTRMUFhET3IxQW9lRTNPL1pvV0NsRVVHcnBML3F4M0Z3eHUvcEI3SmZpVnlmWDNBQm1VRHc3WDVvTE9JaUU5WmFOTVRnRyt6QmREY3UiLCJtYWMiOiJjZThlMTFlYWU1ZjMxN2ZlMGJmNmQwZTk5MzVmZWJhNDY5Yzc5MGM3YjFiOWY4ZDFkMjc1MmRkM2QxNGIxNzRhIiwidGFnIjoiIn0%3D; expires=Mon, 21 Apr 2025 23:15:39 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IjNsWVNEVVN2Qlh4N2wvVHNIK3FxK1E9PSIsInZhbHVlIjoicndGK3dqQnlYNXJZVmdoempreUpkalIvNGRBYXk0dDB3OUxyc1UvZHpQUlBrZGhTRTBVb0R0YmRnbTFUdDdxcWF4S0pFMzlsbm5PMFJIT2tEVUI0cmJlSXljYytoeW82a0l4T1VKQk5JcGRVb0FqZGtXb1l1YjkxblY3OWlyTVciLCJtYWMiOiIzZjYwYTliZDBhMDU1ZWY0MGY3MzM2NTAzMGI4OTM4YTUxZDU5NjRhMjg4MmMyNTYzMTc5N2ZlYjNlMDY2Y2QwIiwidGFnIjoiIn0%3D; expires=Mon, 21 Apr 2025 23:15:39 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: user/confirmed-password-status
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get the password confirmation status.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6Ink5cmFHWit5MkxpSThSYy9welcweHc9PSIsInZhbHVlIjoiVE9nNngyUTZ3cFZZL24vUE1ONGROUFBxUjEvTW92ZWx1M2IybFlHcUhCa3hZS0RQb2JsUG1Dc0xaYWpJR3FXcGxmM1V0K3I4cUw2STFnN3BvUmR1REJLby8vTTdUcWtHS2ptUVpYU2NYV3RuWndLRVVqNUE4a201aW5PaU44Z2oiLCJtYWMiOiJjNmNiMDAzNjc3YjZlNGEzNTcwY2I0ODliMDhkOWM2ZGM4ZTNhNmUwNzQ2YmQ2YTY2ZjM3MmRjZTFkOTY1NzAxIiwidGFnIjoiIn0%3D; expires=Mon, 21 Apr 2025 23:15:39 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IlZjdlRKV0J4RHl2cUVYRGRGUWRueGc9PSIsInZhbHVlIjoiWmZEanJVQ1Y4SlZrVmN5ZWZUR1ZiRjRhVGUwRnRZT3NyanJUQ3FTbFhyMnNVM2hoSjZSbGJySDM1WVJRVGVxLzFmUVFUSnhQK2xaekM2QUE0dThORU9SdFNkK2Q2elRBTUVZTDRWaEgvOXpNT2h1Wkhzc2g1cmo1cWp1d2hvd20iLCJtYWMiOiIxMzdkNjZkNjU1NDkwN2EyZGViYzU1YTI4YTc0OTIzNzk3MTc4N2IzYzRlYTU5ZTgyZDc5ZDQ3ZjJiYzJiZWQ4IiwidGFnIjoiIn0%3D; expires=Mon, 21 Apr 2025 23:15:39 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: user/confirm-password
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: "Confirm the user's password."
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: sanctum/csrf-cookie
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Return an empty response simply to trigger the storage of the CSRF cookie in the browser.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 204
+        content: ''
+        headers:
+          cache-control: 'no-cache, private'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IkJEL25KY0RlYXJhTDlvek1SN3U1V3c9PSIsInZhbHVlIjoieDVMME5yME1DOUg0eEt0cllkelA0Y0RIenZuaDBvT1psL2hZNUVlejFEZExweDJ1aDhITFJCK1p1QTgwcUpDN2poQXFidHFySEVDbmhMR3FoOXU1ZVIramgzMDhXeTRnaE9SZFEyaWd5RURUaXRtK0U3dlAvWGJsS2VGK2FnNEciLCJtYWMiOiIxZTNlNGYzN2ZiMDZkZTNlZDE2NTNmZWQ5Zjg4ODQ2ZTMyNDYxMTA2ZTcxYjA0NDcyNGFlYjkyN2NhMGQyZjJhIiwidGFnIjoiIn0%3D; expires=Mon, 21 Apr 2025 23:15:40 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6InY2a2IydWE1TG9QQUNkMGQrM3NoeGc9PSIsInZhbHVlIjoiTVBFb2tPMzhBRUE1SmNEWmprVHVjUzJvT2Z0MmM0T1RVSVZYR3IyTVNFaFdvRmorR1ZRUHVGN08xRjJSVTRHRCthNnFxeHhHNEs3eFV6enRvSWZpNkgyd0kxRDAwQ0taVEIzcHVrT2dneG9oMitVQUZ3dEZPTzE5YnBKTTIzaTIiLCJtYWMiOiI5YjU3NzhlNDdiMzAyN2QzMTY1NjdkZGQ0MDgwYzM4ZDYzOTkyMjhjOGQ3ZTcyYWUwOGM5YmVjYTNkMDY5ZTg0IiwidGFnIjoiIn0%3D; expires=Mon, 21 Apr 2025 23:15:40 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
     uri: api/user
     metadata:
       groupName: Endpoints
@@ -36,6 +480,515 @@ endpoints:
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: register
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n\n    <title>Viking Transmo - register</title>\n\n    <!-- Fonts -->\n    <link rel=\"preconnect\" href=\"https://fonts.bunny.net\">\n    <link href=\"https://fonts.bunny.net/css?family=figtree:400,600&display=swap\" rel=\"stylesheet\" />\n\n    <!-- Bootstrap -->\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n\n    <!-- Custom CSS -->\n    <link rel=\"stylesheet\" href=\"http://localhost/css/app.css\">\n</head>\n<body>\n\n    \n    <!-- Bootstrap 5.3.2 -->\n<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js\"></script>\n\n<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n    <div class=\"container-fluid\">\n        <a class=\"navbar-brand d-flex align-items-center\" href=\"#\">\n            <img src=\"http://localhost/viking.jpg\" alt=\"Viking Logo\" style=\"height: 40px; margin-right: 10px;\">\n            Viking Violet\n        </a>\n        <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\" \n                aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n            <span class=\"navbar-toggler-icon\"></span>\n        </button>\n\n        <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n            <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">\n                <li class=\"nav-item\">\n                    <a class=\"nav-link \" \n                       aria-current=\"page\" href=\"http://localhost\">Home</a>\n                </li>\n                <li class=\"nav-item\">\n                    <a class=\"nav-link \" \n                       aria-current=\"page\" href=\"http://localhost/a-propos\">About</a>\n                </li>\n            </ul>\n\n            <div class=\"btn-group\">\n                            <button type=\"button\" class=\"btn btn-light dropdown-toggle\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">\n                Connexion\n                </button>\n                    <ul class=\"dropdown-menu dropdown-menu-end\"> <!-- Ajout de dropdown-menu-end -->\n                    <li><a class=\"dropdown-item\" href=\"http://localhost/login\">Login</a></li>\n                    <li><a class=\"dropdown-item\" href=\"http://localhost/register\">Register</a></li>\n                </ul>\n            \n                \n            </div>\n        </div>\n    </div>\n</nav>\n\n<!-- Script pour forcer l'initialisation des dropdowns si nécessaire -->\n<script>\n    document.addEventListener(\"DOMContentLoaded\", function() {\n        var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))\n        var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {\n            return new bootstrap.Dropdown(dropdownToggleEl);\n        });\n    });\n</script>\n    \n    <main class=\"container py-4\">\n            <div class=\"container\">\n        <h1 class=\"text-center text-muted mb-3 mt-5\">Création de compte</h1>\n        <p class=\"text-center text-muted mb-5\">Créez un compte si vous n'en avez pas.</p>\n\n                \n        <form action=\"http://localhost/register\" method=\"POST\" id=\"form-register\" novalidate>\n            <input type=\"hidden\" name=\"_token\" value=\"XTQRzbxzsmqQXTSVGvlaaAq8sODIf0ygebY8Hqa4\" autocomplete=\"off\">\n            <!-- Nom d'utilisateur -->\n            <div class=\"col-md-6 mx-auto\">\n                <label for=\"inputUsername\" class=\"form-label\">Nom d'utilisateur</label>\n                <input type=\"text\" class=\"form-control \" id=\"inputUsername\" name=\"Username\" required value=\"\">\n                            </div>\n\n            <!-- Email -->\n            <div class=\"col-md-6 mx-auto mt-3\">\n                <label for=\"inputEmail4\" class=\"form-label\">Email</label>\n                <input type=\"email\" class=\"form-control \" id=\"inputEmail4\" name=\"email\" required autocomplete=\"email\" value=\"\"\n                data-url-exist-email=\"http://localhost/existEmail\" data-token=\"XTQRzbxzsmqQXTSVGvlaaAq8sODIf0ygebY8Hqa4\">\n                            </div>\n\n            <!-- Mot de passe -->\n            <div class=\"col-md-6 mx-auto mt-3\">\n                <label for=\"inputPassword4\" class=\"form-label\">Mot de passe</label>\n                <input type=\"password\" class=\"form-control \" id=\"inputPassword4\" name=\"password\" required autocomplete=\"new-password\">\n                            </div>\n\n            <!-- Confirmation du mot de passe -->\n            <div class=\"col-md-6 mx-auto mt-3\">\n                <label for=\"inputPasswordConfirmation\" class=\"form-label\">Confirmez le mot de passe</label>\n                <input type=\"password\" class=\"form-control \" id=\"inputPasswordConfirmation\" name=\"password_confirmation\" required autocomplete=\"new-password\">\n                            </div>\n\n            <!-- Checkbox des conditions -->\n            <div class=\"col-md-6 mx-auto mt-3\">\n                <div class=\"form-check\">\n                    <input type=\"checkbox\" class=\"form-check-input\" id=\"terms\" name=\"terms\" required>\n                    <label class=\"form-check-label\" for=\"terms\">\n                        J'accepte les <a href=\"#\" data-bs-toggle=\"modal\" data-bs-target=\"#termsModal\">termes d'utilisation</a>\n                    </label>\n                </div>\n            </div>\n\n            <!-- Bouton d'inscription -->\n            <div class=\"col-md-6 mx-auto mt-3\">\n                    <button type=\"submit\" class=\"btn btn-primary w-100\" onclick=\"console.log('Form submitted')\">Créer un compte</button>\n            </div>\n\n            <!-- Lien vers la connexion -->\n            <div class=\"col-md-6 mx-auto mt-3 text-center\">\n                <p class=\"text-muted\">J'ai déjà un compte ? <a href=\"http://localhost/login\">Se connecter</a></p>\n            </div>\n        </form>\n    </div>\n\n    <!-- Modal des termes d'utilisation -->\n    <div class=\"modal fade\" id=\"termsModal\" tabindex=\"-1\" aria-labelledby=\"termsModalLabel\" aria-hidden=\"true\">\n        <div class=\"modal-dialog\">\n            <div class=\"modal-content\">\n                <div class=\"modal-header\">\n                    <h5 class=\"modal-title\" id=\"termsModalLabel\">Termes d'utilisation</h5>\n                    <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"modal\" aria-label=\"Close\"></button>\n                </div>\n                <div class=\"modal-body text-center\">\n                    <p>Les termes d'utilisation incluent les règles et les politiques que vous devez suivre pour utiliser ce site.</p>\n                    <img src=\"http://localhost/jdg-joueur-du-grenier.gif\" alt=\"GIF animé\" class=\"img-fluid\">\n                </div>\n                <div class=\"modal-footer\">\n                    <button type=\"button\" class=\"btn btn-secondary\" data-bs-dismiss=\"modal\">Fermer</button>\n                </div>\n            </div>\n        </div>\n    </div>\n    </main>\n\n    \n    <footer class=\"bg-light text-center py-3 mt-5 border-top\">\r\n    <div class=\"container\">\r\n        <p class=\"mb-1\">© 2025 Viking Violet. Tous droits réservés.</p>\r\n        <a href=\"http://localhost/mentions-legales\" class=\"text-decoration-none text-muted\">Mentions légales</a>\r\n    </div>\r\n</footer>\r\n\n    <!-- Scripts -->\n    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js\"></script>\n    <script src=\"http://localhost/assets/js/app.js\"></script>\n<script src=\"http://localhost/assets/lib/jquery/jquery.js\"></script>\n<script src=\"http://localhost/assets/main/user/user.js\"></script>\n        <script src=\"http://localhost/assets/main/user/user.js\" type=\"module\"></script>\n    <script>\n        document.addEventListener('DOMContentLoaded', function () {\n            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle=\"tooltip\"]'));\n            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {\n                return new bootstrap.Tooltip(tooltipTriggerEl);\n            });\n        });\n    </script>\n\n</body>\n</html>\n"
+        headers:
+          content-type: 'text/html; charset=UTF-8'
+          cache-control: 'no-cache, private'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6InZPRUg0S3pUWnN4cVhhTitnT0k2Ymc9PSIsInZhbHVlIjoibERRS3h1aXQ4ZTJENGFLQVViT1RTWHdqTllBUlR1bm9GMS9zaDBxQTNCekpTalZ0RnZvbEh1VVQyeWxvUGJ6T2kyQmRHNmVqdTV0RERqbnd4Y0R0Qkhob2t6RmQzcFhTTnYxd3RnUlNRY3djdjVwRWVXdEVqazFxRklrSklQdGoiLCJtYWMiOiIwZGYyNzk2ZWM3MzEzNTE3ZWYzNmRjMmFmNzI0ZTcwNTJlOGRiODc2OWQ5OGZiZjAzOGJiNmEwN2I2MGRmZGU0IiwidGFnIjoiIn0%3D; expires=Mon, 21 Apr 2025 23:15:40 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6InlGWW5TRys1NXhPdkMvVTNxVVVTeVE9PSIsInZhbHVlIjoiRGoxZktyaHowdmRSMGxaSTZtYmlCYUhpb1hDUXRjcERrRzRlaEMwLzRkYnkwVXdpQUJGZkNwTHhacmRFWm1sMzV3TDRIUG9PY3pCSVhWS00za20xVDZTb0pGWFBVeTI0MzM2ZWFEN1g1VEJibU4xU3dQbVdPeTRGMURRU3FCZ0IiLCJtYWMiOiIyNWU4MjBiZjE2ODZmYzlmNTEyMTg1MDNmMDVjNThlZmRiMTA5ZjdjY2NiOTM5YzY1MDdiODNkMWI1OWMzOTJiIiwidGFnIjoiIn0%3D; expires=Mon, 21 Apr 2025 23:15:40 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: register
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      Username:
+        name: Username
+        description: 'Must match the regex /^[a-zA-Z]+$/.'
+        required: true
+        example: zmi
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      email:
+        name: email
+        description: 'Must be a valid email address. Must not be greater than 255 characters.'
+        required: true
+        example: okon.justina@example.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      password:
+        name: password
+        description: 'Must be at least 12 characters. Must match the regex /[A-Z]/. Must match the regex /[a-z]/. Must match the regex /[0-9]/.'
+        required: true
+        example: '6'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      Username: zmi
+      email: okon.justina@example.com
+      password: '6'
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: existEmail
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: builds
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: "Affiche la liste des builds de l'utilisateur connecté."
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IjRyNE1nbmtHUWJNVFRPaVJTcFFLeEE9PSIsInZhbHVlIjoibnVITWErY3ArTEUvbEI2Q3N4UG1wNWJ3YXduek0yUkJyUDNXMmpoeUhERGZSRGptOVcvTFRTVnpiSXA0K2xkd2ppWG81ZUhlOWdES1JMd3lzSTJtbWUvR2YrWHBQbzBENGRLWDM1c0ZNSjhxb1JodEIvc0tVVXcvVWJhUFRoNG4iLCJtYWMiOiIyOTQ4NjQ0YjlhODg4ZDQ3Mjg4OGNhNjRmZWQyMzAwYzBhMjkwMmJhNjQ0MDM0YmM4ZDQxZGY4MjE0ZGVjZjg4IiwidGFnIjoiIn0%3D; expires=Mon, 21 Apr 2025 23:15:40 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6ImZiaFJuS2hmV1pVaU11YXRNQjdtN0E9PSIsInZhbHVlIjoibFhkVHlZYTZTbGJPa1RrblZhOHFrN3RkQmx3aWRFaEdjRFI1Rm4zQ09CVVlLcDhRT01qR0NmaS9ZY2EySi9lb1ZtNXpRNTBmVjRiSG9rNzFZT1FFamN1MjBYSG56bkcyQVVlUG14bldnKzhDY28raXVmak5VbWtZbVNhVm9DbXoiLCJtYWMiOiIxY2Y2MWFlZDNmMTdlM2NhMzc1ZDVjNzBjYjkyYTIzODNkNTc4NzNjY2UxMTVjODgwNzQwMzljNmUwNTZhNDFhIiwidGFnIjoiIn0%3D; expires=Mon, 21 Apr 2025 23:15:40 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: builds/create
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: "Affiche le formulaire de création d'un nouveau build."
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6ImtOa3JkZU5KNFY3bmVFbFBGY1VOTUE9PSIsInZhbHVlIjoiSFIyeitZQVIzcUJhVWZlYXVTVDh5cWNqa2VPVi80QW41dlN4djJVQ3p4aTBGN1RoaUhYUTJ5VGNxNFByMzhyVnFqRjVDbVBkUlh6bFVYQ2JxK3lYaWpXU1gwWUphdWVNaTVkU3MvU0FsSUMxRHRub1R3ZlFadVZvczVwd3pGd2kiLCJtYWMiOiJjYTRhMGEzNzY5OWIyM2YyYWU3MDIwY2IwZTk2MDQ0OTQ2NzIyMzA3YWYyZjU0YjI3YjcxZjk4MTEzNzY1MmM1IiwidGFnIjoiIn0%3D; expires=Mon, 21 Apr 2025 23:15:40 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IlB0eXN5bVMxbFg2QkN4YXlONEVYVFE9PSIsInZhbHVlIjoieDN0ODFRdWQ2bWxjMUo4QitYUDROYnVFRU9QS3BqMFlVS2h2MlNpWUlwano0SkJLNVBhTGo1aGVCbmRNN3JoWkVVZUw3U2ppbVBHQm5BaEpxRDVaQXhFckw3U1Y5eDhnem90ZmdmUHdwYUtTa2xlWE5qRWdZbzQxWDFOcjJJdjciLCJtYWMiOiJmMGVkMTdjMjhkMmNiYTEwZWY4Y2U5MGVlZTE1OTEwNmEzMzYyNjlmYzg5YTMyMTc1OTg1OWE2Y2QxYmMyNTZmIiwidGFnIjoiIn0%3D; expires=Mon, 21 Apr 2025 23:15:40 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: builds
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Enregistre un nouveau build en base de données.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      sujet:
+        name: sujet
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: b
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      description:
+        name: description
+        description: ''
+        required: true
+        example: 'Eius et animi quos velit et.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      image:
+        name: image
+        description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+        required: false
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      is_public:
+        name: is_public
+        description: ''
+        required: false
+        example: false
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+    cleanBodyParameters:
+      sujet: b
+      description: 'Eius et animi quos velit et.'
+      is_public: false
+    fileParameters:
+      image: null
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'builds/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Affiche un build spécifique.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the build.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6ImpaeURpdmNXaERYUzg2Qm1CZSs0OGc9PSIsInZhbHVlIjoic2cxRHR1WDBjSERTTWduNk5ZTmZwUGcrczZIMHJSMGJkYnFBK3dpenZQMmJWSUwvMXd6WkZDOHJDanEyR1c5eDgwYjd2dnhwZmVQVFJrNkpaU1NTY2orYllzY3JCSGM5ZDhHU1h3aVdDeDdBTlZxNkJOYzBpOWZWNDFmem1QRUQiLCJtYWMiOiI1ZDllZGFkYzc2MmJmN2U0MjRjZDMyOTI5MWNkZjc5YjMyYzg4OGExYzFhNDcxMGZjOTY4NzU5NDQ1YTNhZmJhIiwidGFnIjoiIn0%3D; expires=Mon, 21 Apr 2025 23:15:40 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IktOKy9reXZScUZxSFdLWHkwUkRtY0E9PSIsInZhbHVlIjoiMlZRRWtQWThhMUJtTFBFT0owdDFxd0dsL0Q0MjZZS1phbGpTSG1WQkJueExQOTYzWERDZERoaGNxcHZZcXJMUTdqTkphU3I3bmJGeTY4ZjhFQ3hJem5VbDF2Z1ZmQzFUMmJybkFNcjk2VGlXVTF5WGVOQzl1aFIwYS82eEdQV20iLCJtYWMiOiJmOTRlZTgzNzZjNWJiOGJkMTJmNzFkOTZmMTk1Njk3MDI3ZTkyOTBhZjdkOGE2YmRiYjhmODAzNTE3ZjU1YjVlIiwidGFnIjoiIn0%3D; expires=Mon, 21 Apr 2025 23:15:40 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'builds/{build_id}/edit'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: "Affiche le formulaire d'édition d’un build."
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      build_id:
+        name: build_id
+        description: 'The ID of the build.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      build_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6Ik1XWkZFYUMwYk1POFZJcDZYZFdWbnc9PSIsInZhbHVlIjoiZXpoSTJFZ21uTUh1SVFpb2VpdTFOUVQzazN6ekErNjZWUFhqcmxiMWVDc1h2MjN3REp1ZnNOS3VZU3p4VCs3a0lYWVlnRmM3aUNXeHRkZ0dvT3BtSGlNWHhkS1R6TWdRQ2xIeTN3QW9PbjlDZHBJa0tBUjh2Q3dESW1mL0hqVjEiLCJtYWMiOiI4MDNlMmQ3ODBjNTNjYzk4YjFiYzFkMjE0YzA2Mzg2Njg4ZDc4ZWQxNWUwMDliYjlkZDI4MmY1YjQzNDE4MTFiIiwidGFnIjoiIn0%3D; expires=Mon, 21 Apr 2025 23:15:40 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6ImUvUVdQMjg2NUNOaVR3RnV3Tk13dEE9PSIsInZhbHVlIjoiK1Nod0t3eFdPSUI0bm9sYklsUFJRVEVLS1lLZWxyd0FOSTdJRTY1NXhucG5YOWYyYmI4Q3RQTG5lRE5vN0NmMEUzWGZ3L0F2bW9TUGdndEdVSC9MZWtJaURCblFEaWI3aElkaHNjTHpXSG1YcnlIbzVxdDQ5Nk5obXpLL3pvWE8iLCJtYWMiOiI2YTBjZjcyNTkxYTEzN2Y2YjMxYWM4M2I0ZTUzZGMzNjhmZjBiNzM0MzFkMDYzZjc4NDIwY2I1ZmVlMDgwOTI4IiwidGFnIjoiIn0%3D; expires=Mon, 21 Apr 2025 23:15:40 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+      - PATCH
+    uri: 'builds/{id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Met à jour un build existant.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the build.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      sujet:
+        name: sujet
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: b
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      description:
+        name: description
+        description: ''
+        required: true
+        example: 'Eius et animi quos velit et.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      image:
+        name: image
+        description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+        required: false
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      is_public:
+        name: is_public
+        description: ''
+        required: false
+        example: false
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+    cleanBodyParameters:
+      sujet: b
+      description: 'Eius et animi quos velit et.'
+      is_public: false
+    fileParameters:
+      image: null
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: mentions-legales
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Invoke the controller method.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n\n    <title>Viking Transmo - Mentions légales</title>\n\n    <!-- Fonts -->\n    <link rel=\"preconnect\" href=\"https://fonts.bunny.net\">\n    <link href=\"https://fonts.bunny.net/css?family=figtree:400,600&display=swap\" rel=\"stylesheet\" />\n\n    <!-- Bootstrap -->\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n\n    <!-- Custom CSS -->\n    <link rel=\"stylesheet\" href=\"http://localhost/css/app.css\">\n</head>\n<body>\n\n    \n    <!-- Bootstrap 5.3.2 -->\n<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js\"></script>\n\n<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n    <div class=\"container-fluid\">\n        <a class=\"navbar-brand d-flex align-items-center\" href=\"#\">\n            <img src=\"http://localhost/viking.jpg\" alt=\"Viking Logo\" style=\"height: 40px; margin-right: 10px;\">\n            Viking Violet\n        </a>\n        <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\" \n                aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n            <span class=\"navbar-toggler-icon\"></span>\n        </button>\n\n        <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n            <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">\n                <li class=\"nav-item\">\n                    <a class=\"nav-link \" \n                       aria-current=\"page\" href=\"http://localhost\">Home</a>\n                </li>\n                <li class=\"nav-item\">\n                    <a class=\"nav-link \" \n                       aria-current=\"page\" href=\"http://localhost/a-propos\">About</a>\n                </li>\n            </ul>\n\n            <div class=\"btn-group\">\n                            <button type=\"button\" class=\"btn btn-light dropdown-toggle\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">\n                Connexion\n                </button>\n                    <ul class=\"dropdown-menu dropdown-menu-end\"> <!-- Ajout de dropdown-menu-end -->\n                    <li><a class=\"dropdown-item\" href=\"http://localhost/login\">Login</a></li>\n                    <li><a class=\"dropdown-item\" href=\"http://localhost/register\">Register</a></li>\n                </ul>\n            \n                \n            </div>\n        </div>\n    </div>\n</nav>\n\n<!-- Script pour forcer l'initialisation des dropdowns si nécessaire -->\n<script>\n    document.addEventListener(\"DOMContentLoaded\", function() {\n        var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))\n        var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {\n            return new bootstrap.Dropdown(dropdownToggleEl);\n        });\n    });\n</script>\n    \n    <main class=\"container py-4\">\n        <div class=\"container mt-5\">\r\n    \r\n    <h1 class=\"mb-4\">Mentions légales</h1>\r\n\r\n    \r\n    <p><strong>Nom du site :</strong> Viking Violet - Hall de la Mode</p>\r\n    <p><strong>Responsable de la publication :</strong> L'équipe Viking Violet</p>\r\n    <p><strong>Hébergement :</strong> Hébergé par votre fournisseur ou votre serveur</p>\r\n\r\n    \r\n    <h3>Propriété intellectuelle</h3>\r\n    <p>Le contenu de ce site (textes, images, code, etc.) est protégé par le droit d’auteur. Toute reproduction non autorisée est interdite.</p>\r\n\r\n    \r\n    <h3>Utilisation des données</h3>\r\n    <p>Les données personnelles éventuellement collectées sont uniquement utilisées dans le cadre du fonctionnement de l'application (connexion, builds, etc.).</p>\r\n\r\n    \r\n    <h3>Cookies</h3>\r\n    <p>Ce site peut utiliser des cookies à des fins de fonctionnement ou de mesure d’audience.</p>\r\n\r\n    \r\n    <h3>Contact</h3>\r\n    <p>Pour toute question ou réclamation, merci de nous contacter via la page de contact ou à l'adresse e-mail suivante : contact@vikingviolet.com</p>\r\n</div>\r\n    </main>\n\n    \n    <footer class=\"bg-light text-center py-3 mt-5 border-top\">\r\n    <div class=\"container\">\r\n        <p class=\"mb-1\">© 2025 Viking Violet. Tous droits réservés.</p>\r\n        <a href=\"http://localhost/mentions-legales\" class=\"text-decoration-none text-muted\">Mentions légales</a>\r\n    </div>\r\n</footer>\r\n\n    <!-- Scripts -->\n    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js\"></script>\n    <script src=\"http://localhost/assets/js/app.js\"></script>\n<script src=\"http://localhost/assets/lib/jquery/jquery.js\"></script>\n<script src=\"http://localhost/assets/main/user/user.js\"></script>\n    \n</body>\n</html>\n"
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IkRlZ1lIdDZ0Z0FIdU9iSGxJWUo2K3c9PSIsInZhbHVlIjoiNGgyTVRBeUFPMU9YVk8xazgzSmFKcFMxb1Z4UjBaOUhmcEx1dFJxQlFtRkc3eFdha0lyOHhQcFZjNG9jbHhnVVBoNEV2ZG9XL2NhZUVCOFFMWnJUYlhrT2JOb21vVXUwVVZzd3Y3cFhuRmY5MVFlRUlLLzJPUHZzNVJGUE1Dc0wiLCJtYWMiOiIyMDJiODhiODlmMjIzOWMxOGY4OGYxZjk5YzMxYTI1ZjMzNjc5NTBlZTM3NDE1N2VlZGQ3M2UyZWRkNmM2ZWQyIiwidGFnIjoiIn0%3D; expires=Mon, 21 Apr 2025 23:15:40 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6ImEveDB1Vnd1UEZRUlQ3QTM1SEc2cnc9PSIsInZhbHVlIjoiZlpNSXF2cjJtWEtSUGlDUmxSVUlIbkJUc2pYRlhSWUZpZnZlRVh4NzdhYnk3WmUwWVRQWksxVWQzUmxlZDRWZWMzNkF1MDBudnNpR3FCOUxLbDQxZjJtaW9WMTg4WDR3amRiYkhhRE45RzNTYlg2Y1NiNWdBT1BmalNubndWVnQiLCJtYWMiOiI0MmM3NWQ1MTJlZjI4MGZlMzVlOTEwMWE3YjdmYWI3YjFkZDBlNGEzNTFiZGRkODZiNDI4MGM3ODg3ZjYyNTVlIiwidGFnIjoiIn0%3D; expires=Mon, 21 Apr 2025 23:15:40 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
         description: null
         custom: []
     responseFields: []

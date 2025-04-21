@@ -1,0 +1,88 @@
+name: 'Pages publiques'
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: /
+    metadata:
+      groupName: 'Pages publiques'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: "Affiche la page d'accueil avec les builds publics."
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+           "publicBuilds": [
+               {
+                   "id": 1,
+                   "sujet": "Exemple de build",
+                   "description": "Description du build",
+                   "is_public": true
+               }
+           ]
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: a-propos
+    metadata:
+      groupName: 'Pages publiques'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Affiche la page "À propos".'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n\n    <title>Viking Transmo - À propos</title>\n\n    <!-- Fonts -->\n    <link rel=\"preconnect\" href=\"https://fonts.bunny.net\">\n    <link href=\"https://fonts.bunny.net/css?family=figtree:400,600&display=swap\" rel=\"stylesheet\" />\n\n    <!-- Bootstrap -->\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n\n    <!-- Custom CSS -->\n    <link rel=\"stylesheet\" href=\"http://localhost/css/app.css\">\n</head>\n<body>\n\n    \n    <!-- Bootstrap 5.3.2 -->\n<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js\"></script>\n\n<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n    <div class=\"container-fluid\">\n        <a class=\"navbar-brand d-flex align-items-center\" href=\"#\">\n            <img src=\"http://localhost/viking.jpg\" alt=\"Viking Logo\" style=\"height: 40px; margin-right: 10px;\">\n            Viking Violet\n        </a>\n        <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\" \n                aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n            <span class=\"navbar-toggler-icon\"></span>\n        </button>\n\n        <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n            <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">\n                <li class=\"nav-item\">\n                    <a class=\"nav-link \" \n                       aria-current=\"page\" href=\"http://localhost\">Home</a>\n                </li>\n                <li class=\"nav-item\">\n                    <a class=\"nav-link  active \" \n                       aria-current=\"page\" href=\"http://localhost/a-propos\">About</a>\n                </li>\n            </ul>\n\n            <div class=\"btn-group\">\n                            <button type=\"button\" class=\"btn btn-light dropdown-toggle\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">\n                Connexion\n                </button>\n                    <ul class=\"dropdown-menu dropdown-menu-end\"> <!-- Ajout de dropdown-menu-end -->\n                    <li><a class=\"dropdown-item\" href=\"http://localhost/login\">Login</a></li>\n                    <li><a class=\"dropdown-item\" href=\"http://localhost/register\">Register</a></li>\n                </ul>\n            \n                \n            </div>\n        </div>\n    </div>\n</nav>\n\n<!-- Script pour forcer l'initialisation des dropdowns si nécessaire -->\n<script>\n    document.addEventListener(\"DOMContentLoaded\", function() {\n        var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))\n        var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {\n            return new bootstrap.Dropdown(dropdownToggleEl);\n        });\n    });\n</script>\n    \n    <main class=\"container py-4\">\n            <div class=\"container\">\n        <h1 class=\"text-center\">À propos de World of Warcraft</h1>\n        <p>World of Warcraft est un jeu de rôle en ligne massivement multijoueur (MMORPG) développé par Blizzard Entertainment. Dans ce jeu, les joueurs explorent le monde d'Azeroth, accomplissent des quêtes, et interagissent avec d'autres joueurs.</p>\n        <p>Ce guide vous aidera à naviguer dans les différentes facettes du jeu, y compris la création de personnages, le choix des classes, et les stratégies pour progresser efficacement.</p>\n        <h2>Création de Personnage</h2>\n        <p>Lorsque vous commencez, vous aurez la possibilité de créer un personnage en choisissant une race et une classe. Chaque race a ses propres avantages et inconvénients, et chaque classe offre des compétences uniques.</p>\n        <h2>Quêtes et Exploration</h2>\n        <p>Les quêtes sont essentielles pour progresser dans le jeu. Elles vous permettent de gagner de l'expérience, de l'équipement, et de découvrir l'histoire d'Azeroth.</p>\n        <h2>Interactions avec d'autres Joueurs</h2>\n        <p>World of Warcraft est également un jeu social. Vous pouvez rejoindre des guildes, participer à des raids, et interagir avec d'autres joueurs pour accomplir des objectifs communs.</p>\n        <h2>Qu'est-ce que la Transmogrification ?</h2>\n        <p>La transmogrification, ou \"transmo\", est une fonctionnalité de World of Warcraft introduite avec l’extension <strong>Cataclysm</strong>. Elle permet aux joueurs de modifier l’apparence visuelle de leur équipement tout en conservant ses statistiques. Grâce à ce système, vous pouvez personnaliser votre style visuel en appliquant l’apparence d’un ancien objet (que vous avez déjà obtenu) sur votre équipement actuel. C’est un aspect très apprécié par les joueurs qui souhaitent afficher des ensembles thématiques, nostalgiques ou tout simplement uniques.</p>\n    </div>\n    </main>\n\n    \n    <footer class=\"bg-light text-center py-3 mt-5 border-top\">\r\n    <div class=\"container\">\r\n        <p class=\"mb-1\">© 2025 Viking Violet. Tous droits réservés.</p>\r\n        <a href=\"http://localhost/mentions-legales\" class=\"text-decoration-none text-muted\">Mentions légales</a>\r\n    </div>\r\n</footer>\r\n\n    <!-- Scripts -->\n    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js\"></script>\n    <script src=\"http://localhost/assets/js/app.js\"></script>\n<script src=\"http://localhost/assets/lib/jquery/jquery.js\"></script>\n<script src=\"http://localhost/assets/main/user/user.js\"></script>\n    \n</body>\n</html>\n"
+        headers:
+          content-type: 'text/html; charset=UTF-8'
+          cache-control: 'no-cache, private'
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IktZcUlPakV3VzVxZ1p4R0J3dXBxWWc9PSIsInZhbHVlIjoidWlGWVRyY2NteDNUQVV1MDBiaWdiUUFPTC9Uc1liVGt6L0MyTU9ORXB3ZUhJdzlGL0lBd0pzUGRxak5RL0RQeHdpUnE5N25wMDJlN2dTMjJpRW1tb29MVVJGTUMrSTNDRE9HZUpzcWo5T2Yxa0JIaEhjUnhrM2xJVy9ldW1oY0QiLCJtYWMiOiIzNjQyOTgxMDAxYzI3M2Y1ZTczZmNjMzM1MjIyMzNkYTkwMGVmMmY3MzU0MmY1Y2I0YTk5M2JlNmViZDQ1MzgxIiwidGFnIjoiIn0%3D; expires=Mon, 21 Apr 2025 23:15:40 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6Im0rQWxHWVJzcCttRm5qcTM3NVlkTVE9PSIsInZhbHVlIjoicTRSbno5NkRjSnNoblhNMjNMT0h0NFl4WUJ2LzF2MjZWNDhCdzJOcGQrSUpyRVJ2RmFraUxxaVNwSjkxWHNRUDFtL2cyd29qNWRGK3llQlBocjVKb0pJUFdpVVRheGUzWmcvUVg3UUcrcWRmU3ZrbWV5NzM1ZE95RW9DbWNzTDEiLCJtYWMiOiIwNDBiMjk2MGFkZjFmNWQyMWEyMmEyMzQyYjNmY2I5MDI2NDU3ODZkMmVlYTRmZjZiNzk0ZTAyYjJhOGMyYTYzIiwidGFnIjoiIn0%3D; expires=Mon, 21 Apr 2025 23:15:40 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

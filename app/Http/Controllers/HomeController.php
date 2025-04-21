@@ -14,6 +14,17 @@ class HomeController extends Controller
     /**
      * Affiche la page d'accueil avec les builds publics.
      *
+     * @group Pages publiques
+     * @response 200 {
+     *  "publicBuilds": [
+     *      {
+     *          "id": 1,
+     *          "sujet": "Exemple de build",
+     *          "description": "Description du build",
+     *          "is_public": true
+     *      }
+     *  ]
+     * }
      * @return \Illuminate\View\View
      */
     public function home()
@@ -29,6 +40,7 @@ class HomeController extends Controller
     /**
      * Affiche la page d'accueil alternative avec les builds publics.
      *
+     * @group Pages publiques
      * @return \Illuminate\View\View
      */
     public function index()
@@ -41,6 +53,7 @@ class HomeController extends Controller
     /**
      * Affiche la page "À propos".
      *
+     * @group Pages publiques
      * @return \Illuminate\View\View
      */
     public function about()
@@ -52,6 +65,8 @@ class HomeController extends Controller
     /**
      * Retourne la vue du tableau de bord.
      *
+     * @group Dashboard protégé
+     * @authenticated
      * @return \Illuminate\View\View
      */
     public function dashboard()

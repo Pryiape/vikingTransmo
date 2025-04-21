@@ -1,0 +1,183 @@
+name: 'Profil utilisateur'
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: profile
+    metadata:
+      groupName: 'Profil utilisateur'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: "Affiche le profil de l'utilisateur connecté."
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6InZYNUxucllWSG9MMTVxWVhLN0grMGc9PSIsInZhbHVlIjoiOE04eFZRc25KajVoYTc1bDJTb3hxVTBoakhhc1hzK0N0NXBEZHM5d21oa1BFWVZNKzR0UkYyaXhtZkdGdjBMZFI2TFliU2JPb3JDK2lhaTNyV1FMR1pCNkQzaTNNVWp4OStPRk51VWRPUWhwcTNiVEg1RHFlbmFwcjc0VzNCVkMiLCJtYWMiOiI2ZjIxNDVmMGU3ZWI2Y2VhZDMzZDkyOTc4YjE4NTllZGIwYjJhNWE5NWRlMzExZjA0NjM2MWY3NmZiZDQ5ZTM2IiwidGFnIjoiIn0%3D; expires=Mon, 21 Apr 2025 23:15:40 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6Imh5enJIeHg0bnZpMmo3RkIrK3hycmc9PSIsInZhbHVlIjoia1BDbWhXVTI4dHJMcGMxcUZJeXhjT0hDOENYVnppUnZJdlpxTjhIS0NFRzRhQThOaHB4OWU4SHcvbGs2bVlHSTllU3U1eXFXc2FhbGdSbHVXR01ERnBuWDNSMFpMV0s2TThvdS9QcXhZMmJ4RG9SWlhGVDF1WU1UdWhyV0Z2WXgiLCJtYWMiOiI1ZmZhNWEzZjE5NWRjY2JiYzAzOWUzOWNmMDg5NWU0OTE4YjY5MDBjYjZlNDJhNDkzMWE3NTZmYmIwOWVjZTAxIiwidGFnIjoiIn0%3D; expires=Mon, 21 Apr 2025 23:15:40 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: profile/edit
+    metadata:
+      groupName: 'Profil utilisateur'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: "Affiche le formulaire d'édition du profil."
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IlZOSkF6UGNtcnNMcnNPV0ZSN0toamc9PSIsInZhbHVlIjoiRU1CRmdqRGNzdHJlaml1K1FkeGJFVk53eDlxdVdqMElUaEZGQ3VrSFFkT0pSK0tmMEdqT3pzTTNLazhXcEx3bEkxVjFTcXVsYTV2L0lkdmFKaS9DZ3NQTGJYRmMyY3B2aWszNDVoR2lML2YrT1ZGQlNSZHNsM3NzeS9xOERlQWciLCJtYWMiOiIyMzFjMDg3YTZlYzg3ODliNTQzYWY1OWFjMDgxZDg3MTZkOGUwMjc0NmIzZmExNDI5ZTNmYTAzNTE3OThlZGI3IiwidGFnIjoiIn0%3D; expires=Mon, 21 Apr 2025 23:15:40 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6InZNcFlIaFd2Q2FUc1dCS0lXRWUvWWc9PSIsInZhbHVlIjoiTFU1eGxQbUg0dUkwQmpVSFhIU1VSTmd6b3psaXdRTDBIQzlBMWdrZkdsZ00xek5zcFJxOGRJaUdWMTZjVHdLUVExVjRoVHBWOEFkUDRoTVd5Y2FuMStFRGdKRWVvODVOR2I2QSthTFF1bXhHbnpVTEZoWWhkMm96YXRhMm0xRmQiLCJtYWMiOiJjMjhmOWE3YmViYTgzNjIyMTVjOTBmNjY2YzA3NWRjNjZjNTQ0ZmJmNzE1ZDYyOGUzYzczYThjZTk0YWRhNDFjIiwidGFnIjoiIn0%3D; expires=Mon, 21 Apr 2025 23:15:40 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: profile
+    metadata:
+      groupName: 'Profil utilisateur'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: "Met à jour le profil de l'utilisateur."
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: "Le nom de l'utilisateur."
+        required: true
+        example: 'Jean Dupont'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      email:
+        name: email
+        description: "L'adresse email de l'utilisateur."
+        required: true
+        example: jean.dupont@example.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      profile_picture:
+        name: profile_picture
+        description: "La photo de profil de l'utilisateur (optionnelle)."
+        required: false
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+    cleanBodyParameters:
+      name: 'Jean Dupont'
+      email: jean.dupont@example.com
+    fileParameters:
+      profile_picture: null
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: app_profile
+    metadata:
+      groupName: 'Profil utilisateur'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: "Affiche le profil de l'utilisateur connecté."
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          set-cookie: 'XSRF-TOKEN=eyJpdiI6IldVNlY2MVRqNEtsdS81ZktKYU1UcWc9PSIsInZhbHVlIjoiYUIzNGRJRXhqcnQ0NTBaYjdaSUJIQTVoOHZjdHd4b0xHR0xjV3h5NEVKemd4WUdBbmNjS1krbGN6M1ZSRlZhb1UxSjQwejRWY2ZpM044bWlucUJ3eGMvcXJWVFZWeVgrMDd3KzFYY0paZUdHL0JqWmlCNmkxSnZRQ3R6U3ZTNGYiLCJtYWMiOiI0Yjk0ZmJlZTZjOGNjNzczNzA2ZWRmODBjN2ZlNWY5ZGY4OWU3NmJkMzU5NzY0YzM0NWY0ZTFkNTVlOTBlODlmIiwidGFnIjoiIn0%3D; expires=Mon, 21 Apr 2025 23:15:40 GMT; Max-Age=7200; path=/; samesite=lax; laravel_session=eyJpdiI6IklVRVJhV0J0ZXBvd2x5TnQrWis3S3c9PSIsInZhbHVlIjoiOGZ1SnB2UXdLd09kNXVCb3lGWlQwM0o5NXdPcWducjB3QlhoSjNpL1B5cG9sNnN6Q0xabzFKNUdmUUV3TDZiNjFEQmZScFBWZlg3c3d3bTV6MmVWcjlSSW1ZYlRwYkVpcUFZRVFtd0U5bzN5WmI1WEluQWhZK3BwcXJTYjFrWHUiLCJtYWMiOiI3MGNmODYxMGEzMTJiYzgzZjEwMTQ5NDU2NGE3OTFmZWQzOTExMTNhY2VkMTkyY2E4MWE3NDk2NTgyNzIzY2JjIiwidGFnIjoiIn0%3D; expires=Mon, 21 Apr 2025 23:15:40 GMT; Max-Age=7200; path=/; httponly; samesite=lax'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

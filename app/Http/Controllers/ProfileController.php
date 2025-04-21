@@ -11,6 +11,8 @@ class ProfileController extends Controller
     /**
      * Affiche le profil de l'utilisateur connecté.
      *
+     * @group Profil utilisateur
+     * @authenticated
      * @return \Illuminate\View\View
      */
     public function show()
@@ -23,6 +25,8 @@ class ProfileController extends Controller
     /**
      * Affiche le formulaire d'édition du profil.
      *
+     * @group Profil utilisateur
+     * @authenticated
      * @return \Illuminate\View\View
      */
     public function edit()
@@ -34,6 +38,11 @@ class ProfileController extends Controller
     /**
      * Met à jour le profil de l'utilisateur.
      *
+     * @group Profil utilisateur
+     * @authenticated
+     * @bodyParam name string required Le nom de l'utilisateur. Example: Jean Dupont
+     * @bodyParam email string required L'adresse email de l'utilisateur. Example: jean.dupont@example.com
+     * @bodyParam profile_picture file La photo de profil de l'utilisateur (optionnelle).
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\RedirectResponse
      */
@@ -67,7 +76,11 @@ class ProfileController extends Controller
         }
         $user = Auth::user();
 
-        $user->update($data);
+        // Use the Eloquent model instance to update user data
+        $userModel = \App\Models\User::find($user->id);
+        if ($userModel) {
+            $userModel->update($data);
+        }
 
         return redirect()->route('profile.show')->with('success', 'Profil mis à jour avec succès.');
     }
