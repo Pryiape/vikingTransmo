@@ -1,57 +1,84 @@
-Viking
-Viking est un projet web développé principalement en CSS, PHP, Blade et JavaScript.
+# Viking Violet - Hall de la Mode
 
-## Aperçu du Projet
-Viking est conçu pour offrir une plateforme robuste et flexible pour le développement d'applications web. Il vise à simplifier le processus de création d'applications en fournissant des outils et des fonctionnalités puissants.
+**Viking Violet** est une application web développée avec Laravel, Blade, PHP, JavaScript et Bootstrap.  
+Elle permet aux utilisateurs de créer, visualiser et partager des builds personnalisés autour d’un thème inspiré de l’univers World of Warcraft.
 
-## Composition des Langages
-CSS: 81%
-PHP: 14.5%
-Blade: 3.1%
-JavaScript: 1.4%    
+---
 
-## Installation
-Pour installer le projet Viking, suivez les étapes suivantes :
+## 🚀 Aperçu du Projet
 
-1. Clonez le dépôt :
+Viking Violet offre une interface interactive pour :
+
+- Créer des builds personnalisés (titre, description, image)
+- Gérer son profil (photo de profil, informations utilisateur)
+- Consulter des builds publics partagés par d'autres utilisateurs
+- Accéder à un arbre de talents dynamique (à venir)
+
+---
+
+## 🧱 Technologies utilisées
+
+| Langage       | Utilisation principale                |
+|---------------|---------------------------------------|
+| **PHP**       | Backend (Laravel 11)                  |
+| **Blade**     | Moteur de templates                   |
+| **CSS**       | Styles personnalisés + Bootstrap 5    |
+| **JavaScript**| Interaction dynamique (talents, menus)|
+
+---
+
+## ⚙️ Installation
+
+1. **Cloner le projet** :
    ```bash
    git clone https://github.com/Pryiape/viking.git
-   ```
-2. Installez les dépendances :
-   ```bash
-   composer install
-   npm install
-   ```
+   cd viking
 
-## Utilisation
-Pour lancer le projet en local :
+Installer les dépendances PHP et JS :
 
-1. Compilez les assets :
-   ```bash
-   npm run dev
-   ```
-2. Démarrez le serveur :
-   ```bash
-   php artisan serve
-   ```
+composer install
+npm install
 
-## Fonctionnalités
-- Moteur de routage simple et rapide
-- Conteneur d'injection de dépendances puissant
-- Prise en charge de plusieurs back-ends pour le stockage de session et de cache
-- ORM de base de données intuitif et expressif
-- Migrations de schéma agnostiques de la base de données
-- Traitement des tâches en arrière-plan robuste
-- Diffusion d'événements en temps réel
+Créer le fichier d’environnement :
+cp .env.example .env
+php artisan key:generate
 
-## Contribuer
-Merci de considérer une contribution au projet Viking ! Vous pouvez trouver le guide de contribution dans la documentation du projet.
+Configurer la base de données dans .env puis exécuter les migrations :
+php artisan migrate
+php artisan storage:link
 
-## Code de Conduite
-Pour assurer que la communauté Viking soit accueillante pour tous, merci de lire et respecter notre Code de Conduite.
+🧪 Utilisation locale
+Lancer le serveur Laravel :
+php artisan serve
+Compiler les assets :
+npm run dev
 
-## Vulnérabilités de Sécurité
-Si vous découvrez une vulnérabilité de sécurité dans Viking, merci d'envoyer un e-mail à bernardlereceveur@gmail.com. Toutes les vulnérabilités de sécurité seront traitées rapidement.
+🧰 Fonctionnalités
+Création et modification de builds avec image
 
-## Licence
-Le projet Viking est un logiciel open-source sous licence MIT.
+Gestion du profil utilisateur (nom, email, photo)
+
+Galerie de builds publics
+
+Authentification et inscription personnalisée
+
+Documentation API (générée avec Scribe)
+📄 Documentation API
+La documentation des endpoints est générée automatiquement avec Scribe.
+php artisan scribe:generate
+Elle est disponible localement sur :
+http://localhost:8000/docs
+🤝 Contribuer
+Merci de considérer une contribution au projet Viking Violet !
+Les pull requests sont les bienvenues. Assurez-vous de suivre les bonnes pratiques Laravel.
+
+🧑‍⚖️ Code de Conduite
+Pour garantir un environnement respectueux, merci de suivre notre Code de Conduite (fichier CODE_OF_CONDUCT.md si existant).
+
+🛡️ Sécurité
+Si vous découvrez une vulnérabilité de sécurité, merci d’en informer immédiatement par email :
+📧 bernardlereceveur@gmail.com
+Nous traiterons les incidents en priorité.
+
+📄 Licence
+Ce projet est distribué sous la licence MIT.
