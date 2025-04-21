@@ -27,7 +27,7 @@ Route::match(['get', 'post'], '/dashboard', [HomeController::class, 'dashboard']
     ->middleware('auth');
 
 
-Route::get('/app_builds', [BuildController::class, 'appBuilds'])->name('app_builds');
+Route::resource('builds', BuildController::class)->only(['index', 'create', 'store', 'show']);
 
 // Routes Builds protégées
 Route::middleware(['auth'])->group(function () {
@@ -41,3 +41,4 @@ Route::middleware('auth')->group(function () {
     Route::put('profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::get('app_profile', [ProfileController::class, 'show'])->name('app_profile'); // Define the app_profile route
 });
+Route::view('/mentions-legales', 'legal')->name('legal');

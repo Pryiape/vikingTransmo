@@ -1,4 +1,4 @@
-@extends('welcome')
+@extends('layouts.app')
 
 @section('title', 'Mes Builds')
 
@@ -9,7 +9,7 @@
     <a href="{{ route('builds.create') }}" class="btn btn-success mb-4">Créer un Nouveau Build</a>
 
     <div class="row">
-        @forelse($myBuilds as $build)
+        @forelse($builds as $build)
             <div class="col-md-6 col-lg-4 mb-4">
                 <div class="card shadow-sm h-100">
                     <div class="card-body">

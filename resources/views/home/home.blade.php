@@ -60,5 +60,6 @@
             <p>Aucun build public disponible.</p>
         @endforelse 
     </div>
+    @include('components.footer')
 </body>
 </html>
