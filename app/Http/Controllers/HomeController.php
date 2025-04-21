@@ -10,13 +10,15 @@ use Illuminate\Support\Facades\Http;
 
 class HomeController extends Controller
 {
-    //la page / vue home.blade.php
+    // Contrôleur pour la page d'accueil (vue home.blade.php)
     /**
-     * 
+     * Affiche la page d'accueil avec les builds publics.
+     *
+     * @return \Illuminate\View\View
      */
     public function home()
     {    
-        // Fetch public builds
+        // Récupère les builds publics les plus récents
         $publicBuilds = \App\Models\Build::where('is_public', true)->latest()->get();
         
         return view('home.home', [
@@ -24,21 +26,33 @@ class HomeController extends Controller
         ]);
     }
 
+    /**
+     * Affiche la page d'accueil alternative avec les builds publics.
+     *
+     * @return \Illuminate\View\View
+     */
     public function index()
     {
         $publicBuilds = \App\Models\Build::where('is_public', true)->latest()->get();
 
         return view('home', compact('publicBuilds'));
     }
+
+    /**
+     * Affiche la page "À propos".
+     *
+     * @return \Illuminate\View\View
+     */
     public function about()
     {
-    return view('home.about');
+        return view('home.about');
     }
 
-
-    //la page / vue dashboard.blade.php
+    // Contrôleur pour la page du tableau de bord (vue dashboard.blade.php)
     /**
      * Retourne la vue du tableau de bord.
+     *
+     * @return \Illuminate\View\View
      */
     public function dashboard()
     {

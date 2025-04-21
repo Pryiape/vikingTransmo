@@ -45,21 +45,29 @@
     </style>
 </head>
 <body>
+    {{-- Inclusion de la barre de navigation --}}
     @include('navBar.navBar')
 
+    {{-- Titre principal de la page --}}
     <h1 style="text-align:center;">Builds Publics</h1>
 
+    {{-- Liste des builds publics --}}
     <div class="public-builds">
         @forelse($publicBuilds as $build)
             <div class="build-card">
+                {{-- Sujet du build --}}
                 <h3>{{ $build->sujet }}</h3>
+                {{-- Description du build --}}
                 <p>{{ $build->description }}</p>
+                {{-- Lien vers la page détaillée du build --}}
                 <a href="{{ route('builds.show', $build) }}">Voir le build</a>
             </div>
         @empty
+            {{-- Message affiché si aucun build public n'est disponible --}}
             <p>Aucun build public disponible.</p>
         @endforelse 
     </div>
+    {{-- Inclusion du pied de page --}}
     @include('components.footer')
 </body>
 </html>

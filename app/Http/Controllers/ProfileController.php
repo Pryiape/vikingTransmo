@@ -4,23 +4,26 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Storage; // Import the Storage facade
+use Illuminate\Support\Facades\Storage; // Importation de la façade Storage
 use Illuminate\Support\Facades\Validator;
-
 class ProfileController extends Controller
 {
     /**
-     * Show the user profile.
+     * Affiche le profil de l'utilisateur connecté.
+     *
+     * @return \Illuminate\View\View
      */
     public function show()
     {
         $user = Auth::user();
-        $activities = $user->activities ?? []; // Ensure activities is an array
+        $activities = $user->activities ?? []; // S'assure que activities est un tableau
         return view('profile.show', compact('user', 'activities'));
     }
 
     /**
-     * Show the form for editing the profile.
+     * Affiche le formulaire d'édition du profil.
+     *
+     * @return \Illuminate\View\View
      */
     public function edit()
     {
@@ -29,7 +32,10 @@ class ProfileController extends Controller
     }
 
     /**
-     * Update the user profile.
+     * Met à jour le profil de l'utilisateur.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function update(Request $request)
     {
@@ -38,7 +44,7 @@ class ProfileController extends Controller
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users,email,' . $user->id,
-            'profile_picture' => 'nullable|image|mimes:jpeg,png|max:2048', // Validate the image
+            'profile_picture' => 'nullable|image|mimes:jpeg,png|max:2048', // Validation de l'image
         ]);
 
         if ($validator->fails()) {
@@ -50,18 +56,19 @@ class ProfileController extends Controller
         $data = $request->only(['name', 'email']);
 
         if ($request->hasFile('profile_picture')) {
-            // Delete the old profile picture if exists
+            // Supprime l'ancienne photo de profil si elle existe
             if ($user->profile_picture) {
                 Storage::delete($user->profile_picture);
             }
 
-            // Store the new profile picture
+            // Stocke la nouvelle photo de profil
             $path = $request->file('profile_picture')->store('profile_pictures', 'public');
             $data['profile_picture'] = $path;
         }
+        $user = Auth::user();
 
         $user->update($data);
 
-        return redirect()->route('profile.show')->with('success', 'Profile updated successfully.');
+        return redirect()->route('profile.show')->with('success', 'Profil mis à jour avec succès.');
     }
 }
